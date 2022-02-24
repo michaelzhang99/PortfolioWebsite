@@ -9,59 +9,57 @@ export default function Carousel(props) {
     if (img === images.length - 1) {
       setImg(0);
     } else {
-      setImg(img + 1);
+      setImg((img) => img + 1);
     }
   };
 
-  const prev = () => {
-    if (img === 0) {
-      setImg(images.length - 1);
-    } else {
-      setImg(img - 1);
-    }
-  };
+  // const prev = () => {
+  //   if (img === 0) {
+  //     setImg(images.length - 1);
+  //   } else {
+  //     setImg((img) => img - 1);
+  //   }
+  // };
 
   useEffect(() => {
     const slideTimer = window.setInterval(next, interval);
     return function cleanup() {
       window.clearInterval(slideTimer);
     };
-  }, []);
+  }, [img]);
 
-  const prevText = "<";
-  const nextText = ">";
+  // const prevText = "";
+  // const nextText = "";
 
   return (
-    <div style={{ height: "100%", width: "100%" }} className="img-wrapper">
-      <button
+    <div className="container1">
+      {/* <button
+        id="1"
         style={{
-          fontSize: "5em",
-          padding: 0,
+          fontSize: "1em",
+          padding: 0.7,
           border: "none",
           background: "none",
         }}
-        className="btn btn-md btn-success"
+        className="btn"
         onClick={prev}
       >
         {prevText}
-      </button>
-      <img
-        style={{ height: "100%", width: "100%", borderRadius: "20px" }}
-        className="img-responsive"
-        src={images[img]}
-      />
-      <button
+      </button> */}
+      <img src={images[img]} alt="slides" />
+      {/* <button
+        id="2"
         style={{
-          fontSize: "5em",
-          padding: 0,
+          fontSize: "1em",
+          padding: 0.7,
           border: "none",
           background: "none",
         }}
-        className="btn btn-md btn-success"
+        className="btn"
         onClick={next}
       >
         {nextText}
-      </button>
+      </button> */}
     </div>
   );
 }

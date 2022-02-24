@@ -92,57 +92,10 @@ export default function Portfolio() {
           <div className="container">
             <div className="item">
               <Carousel
+                style={{ marginRight: "1em" }}
                 images={[data.img, data.img2, data.img3, data.img4]}
-                interval={1000}
+                interval={5000}
               />
-
-              {/* <Rerousel itemRef={carouselRef} interval={5000} stop={false}>
-                <img src={data.img} key="img" ref={carouselRef} />
-                <img src={data.img2} key="img2" ref={carouselRef} />
-                <img src={data.img3} key="img3" ref={carouselRef} />
-                <img src={data.img4} key="img4" ref={carouselRef} />
-                <img src={data.img5} key="img5" ref={carouselRef} />
-              </Rerousel> */}
-              {/* 
-<CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={125}
-        totalSlides={3}
-      >
-        <Slider>
-          <Slide index={0}>I am the first Slide.</Slide>
-          <Slide index={1}>I am the second Slide.</Slide>
-          <Slide index={2}>I am the third Slide.</Slide>
-        </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
-      </CarouselProvider> */}
-
-              {/* <Carousel>
-                <img src={data.img} alt="" />
-                <img
-                  src={require("../portfolio/nyuRevit/SkyGarden.png")}
-                  alt=""
-                />
-                <img src={data.img2} alt="" />
-                <img src={data.img3} alt="" />
-                <img src={data.img4} alt="" />
-                <img src={data.img5} alt="" /> */}
-              {/* </Carousel> */}
-              {/* <Rerousel>
-                  <div className="slides">
-                    <img src={data.img} alt="" />
-                  </div>
-                  <div className="slides">
-                    <img src={data.img2} alt="" />
-                  </div>
-                  <div className="slides">
-                    <img src={data.img3} alt="" />
-                  </div>
-                  <div className="slides">
-                    <img src={data.img} alt="" />
-                  </div>
-                </Rerousel> */}
             </div>
           </div>
         </div>

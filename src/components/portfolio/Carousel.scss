@@ -7,45 +7,77 @@
   transform: translateY(-50%);
 }
 
-.img-wrapper {
+// .img-wrapper {
+//   position: relative;
+// }
+
+// .img-responsive {
+//   width: 100%;
+//   height: auto;
+// }
+
+// .btn-responsive {
+//   /* matches 'btn-md' */
+//   padding: 10px 16px;
+//   font-size: 18px;
+//   line-height: 1.3333333;
+//   border-radius: 6px;
+// }
+
+// @media (max-width: 760px) {
+//   /* matches 'btn-xs' */
+//   .btn-responsive {
+//     padding: 1px 5px;
+//     font-size: 12px;
+//     line-height: 1.5;
+//     border-radius: 3px;
+//   }
+// }
+
+// .img-overlay {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   text-align: center;
+// }
+
+// .img-overlay:before {
+//   content: " ";
+//   display: block;
+//   /* adjust 'height' to position overlay content vertically */
+//   height: 50%;
+// }
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
   position: relative;
+  width: 100%;
 }
 
-.img-responsive {
-  width: 100%;
+/* Make the image responsive */
+.container img {
+  width: 70%;
   height: auto;
 }
 
-.btn-responsive {
-  /* matches 'btn-md' */
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.3333333;
-  border-radius: 6px;
-}
-
-@media (max-width: 760px) {
-  /* matches 'btn-xs' */
-  .btn-responsive {
-    padding: 1px 5px;
-    font-size: 12px;
-    line-height: 1.5;
-    border-radius: 3px;
-  }
-}
-
-.img-overlay {
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.img-overlay:before {
-  content: " ";
-  display: block;
-  /* adjust 'height' to position overlay content vertically */
-  height: 50%;
+.container .btn:hover {
+  background-color: black;
 }
