@@ -79,7 +79,8 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: fill;
+        border-radius: 20px;
       }
     }
   }
@@ -154,6 +155,22 @@
           grid-template-columns: 1fr;
         }
       }
+      .slides {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100%);
+        height: auto;
+        font-family: Signika;
+        font-weight: bold;
+        font-size: 1.5em;
+        border: solid 1px black;
+        background-color: #61dafb;
+
+        @media (max-width: 1150px) {
+          width: 100%;
+        }
+      }
 
       h3 {
         position: absolute;
@@ -166,7 +183,8 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        border-radius: 20px;
       }
     }
   }
