@@ -99,12 +99,11 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-        <div>
-          <div className="bb1">
+        <div className="box2">
+          <div>
             <div>
               <h3>{data.descriptionTitle}</h3>
-              <> </>
-              <h4 className="increasespace"> {data.descriptionBody}</h4>
+              <p> {data.descriptionBody}</p>
             </div>
           </div>
         </div>
