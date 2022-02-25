@@ -13,11 +13,11 @@ import Carousel from "../portfolio/Carousel";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import {
-  featuredPortfolio,
-  webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
+  NYURevitPortfolio,
+  RvsEngPortfolio,
+  PendulumPortfolio,
+  FEAPortfolio,
+  SanJudePortfolio,
 } from "../../data";
 
 export default function Portfolio() {
@@ -26,20 +26,20 @@ export default function Portfolio() {
   const carouselRef = useRef(null);
   const list = [
     {
-      id: "renovation",
-      title: "NYU Building Renovation",
-    },
-    {
       id: "Reverse",
       title: "Reverse Product Engineering",
     },
     {
-      id: "Bike",
-      title: "Custom Built Bike",
+      id: "Pendulum",
+      title: "Product Design: Inverted Pendulum",
     },
     {
-      id: "Cad",
-      title: "CAD",
+      id: "FEA",
+      title: "Finite Element on Subway Wheel ",
+    },
+    {
+      id: "renovation",
+      title: "NYU Building Renovation",
     },
     {
       id: "881",
@@ -49,23 +49,23 @@ export default function Portfolio() {
 
   useEffect(() => {
     switch (selected) {
-      case "renovation":
-        setData(featuredPortfolio);
-        break;
       case "Reverse":
-        setData(webPortfolio);
+        setData(RvsEngPortfolio);
         break;
-      case "Bike":
-        setData(mobilePortfolio);
+      case "Pendulum":
+        setData(PendulumPortfolio);
         break;
-      case "Cad":
-        setData(designPortfolio);
+      case "FEA":
+        setData(FEAPortfolio);
         break;
       case "881":
-        setData(contentPortfolio);
+        setData(SanJudePortfolio);
+        break;
+      case "renovation":
+        setData(NYURevitPortfolio);
         break;
       default:
-        setData(featuredPortfolio);
+        setData(RvsEngPortfolio);
     }
   }, [selected]);
 
