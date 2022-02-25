@@ -27,14 +27,14 @@
   }
 
   .slider {
-    height: 350px;
+    height: 280px;
     display: flex;
     position: absolute;
     left: 0;
     transition: all 1s ease-out;
 
     @include mobile {
-      height: 100vh;
+      height: 120vh;
       flex-direction: column;
       justify-content: center;
     }
@@ -61,11 +61,15 @@
         }
 
         .left {
-          flex: 4;
+          flex: 5;
           height: 80%;
           display: flex;
           align-items: center;
           justify-content: center;
+
+          @include mobile {
+            flex: none;
+          }
 
           .leftContainer {
             width: 90%;
@@ -84,8 +88,7 @@
               justify-content: center;
 
               @include mobile {
-                width: 20px;
-                height: 20px;
+                display: none;
               }
 
               img {
@@ -100,7 +103,10 @@
               font-size: 20px;
 
               @include mobile {
-                font-size: 13px;
+                // font-size: 13px;
+                // justify-content: center;
+                // align-items: center;
+                display: none;
               }
             }
             p {
@@ -118,16 +124,16 @@
           }
         }
         .right {
-          flex: 8;
+          flex: 7;
           height: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
-          overflow: hidden;
 
-          img {
-            width: 400px;
-            transform: rotate(-10deg);
+          @include mobile {
+            flex: none;
+            width: auto;
+            height: 80px;
           }
         }
       }

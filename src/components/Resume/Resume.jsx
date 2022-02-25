@@ -1,29 +1,42 @@
 import { useState } from "react";
 import "./Resume.scss";
+import styled from "styled-components";
+
+// import { Button, Icon } from "semantic-ui-react";
+// import Commission from "./Downloadables/NYURevitComission.pdf";
+// import MZResume from "./Downloadables/Michael-Zhang-Resume.pdf";
+// import Plants from "./Downloadables/Plantsfor881SanJude.xlsx";
+// import Landscape from "./Downloadables/LANDSCAPE.pdf";
 
 export default function Resume() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const data = [
     {
       id: "1",
-      icon: "./assets/mobile.png",
-      title: "Web Design",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      img: "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+      icon: "./assets/writing.png",
+      title: "Resume",
+      dtitle: "Resume",
+      desc:
+        "Hi check out my resume: school involvement, additional projects such as a custom made bike etc ",
+      downloads: "./Downloadables/Michael-Zhang-Resume.pdf",
     },
     {
       id: "2",
       icon: "./assets/globe.png",
-      title: "Mobile Application",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img: "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+      title: "More Info NYU Revit",
+      dtitle: "NYU Revit Commission",
+      desc:
+        " Find a whole commision report with floor plans of every floor, vision statement to the right",
+      downloads: "./Downloadables/NYURevitComission.pdf",
     },
     {
       id: "3",
-      icon: "./assets/writing.png",
-      title: "Branding",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img: "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+      icon: "./assets/globe.png",
+      title: "More Info San Jude",
+      dtitle: "San Jude Plans",
+      desc:
+        "More information regarding the 881 San Jude Landscape: full pdf of the landscape drawing and plant slections can be found to the right",
+      downloads: "./Downloadables/LANDSCAPE.pdf",
     },
   ];
 
@@ -32,6 +45,22 @@ export default function Resume() {
       ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
   };
+
+  const Button = styled.button`
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px 60px;
+    width: 350px;
+    height: 120px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: ease background-color 250ms;
+    &:hover {
+      background-color: #605e54;
+
+  `;
 
   return (
     <div className="Resume" id="Resume">
@@ -49,14 +78,14 @@ export default function Resume() {
                   </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
-                  <span>Projects</span>
                 </div>
               </div>
               <div className="right">
-                <img
-                  src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"
-                  alt=""
-                />
+                <a href={d.downloads} download={d.dtitle}>
+                  <Button>
+                    <h2>Download {d.title}</h2>
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
