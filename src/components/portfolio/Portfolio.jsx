@@ -43,7 +43,7 @@ export default function Portfolio() {
     },
     {
       id: "881",
-      title: "881 Sand Jude Landscaping",
+      title: "881 San Jude Landscaping",
     },
   ];
 
