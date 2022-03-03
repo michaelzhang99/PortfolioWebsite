@@ -40,21 +40,11 @@ export default function Resume() {
       downloads: "./Downloadables/NYURevitComission.pdf",
       downloadName: "Download",
     },
-    {
-      id: "4",
-      icon: "./assets/globe.png",
-      title: "More Info San Jude",
-      dtitle: "San Jude Plans",
-      desc:
-        "More information regarding the 881 San Jude Landscape: full pdf of the landscape drawing and plant slections can be found to the right",
-      downloads: "./Downloadables/LANDSCAPE.pdf",
-      downloadName: "Download",
-    },
   ];
 
   const handleClick = (way) => {
     way === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 3)
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
   };
 
