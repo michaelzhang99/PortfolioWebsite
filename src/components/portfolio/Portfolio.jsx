@@ -93,7 +93,7 @@ export default function Portfolio() {
             <div className="item">
               <Carousel
                 style={{ marginRight: "1em" }}
-                images={[data.img, data.img2, data.img3, data.img4]}
+                images={[data.img, data.img2, data.img3, data.img4, data.img5]}
                 interval={5000}
               />
             </div>
