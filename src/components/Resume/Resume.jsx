@@ -19,30 +19,42 @@ export default function Resume() {
       desc:
         "Hi check out my resume: school involvement, additional projects such as a custom made bike etc ",
       downloads: "./Downloadables/Michael-Zhang-Resume.pdf",
+      downloadName: "Download",
     },
     {
       id: "2",
+      icon: "./assets/mobile.png",
+      title: "Linkedin Profile",
+      dtitle: "Linkedin",
+      desc: "Check out my Linkedin profile and come say hi :)",
+      downloads: "https://www.linkedin.com/in/michaelzhang1219/",
+      downloadName: "Visit my",
+    },
+    {
+      id: "3",
       icon: "./assets/globe.png",
       title: "More Info NYU Revit",
       dtitle: "NYU Revit Commission",
       desc:
         " Find a whole commision report with floor plans of every floor, vision statement to the right",
       downloads: "./Downloadables/NYURevitComission.pdf",
+      downloadName: "Download",
     },
     {
-      id: "3",
+      id: "4",
       icon: "./assets/globe.png",
       title: "More Info San Jude",
       dtitle: "San Jude Plans",
       desc:
         "More information regarding the 881 San Jude Landscape: full pdf of the landscape drawing and plant slections can be found to the right",
       downloads: "./Downloadables/LANDSCAPE.pdf",
+      downloadName: "Download",
     },
   ];
 
   const handleClick = (way) => {
     way === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 3)
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
   };
 
@@ -83,7 +95,9 @@ export default function Resume() {
               <div className="right">
                 <a href={d.downloads} download={d.dtitle}>
                   <Button>
-                    <h2>Download {d.title}</h2>
+                    <h2>
+                      {d.downloadName} {d.title}
+                    </h2>
                   </Button>
                 </a>
               </div>

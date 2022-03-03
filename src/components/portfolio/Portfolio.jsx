@@ -21,7 +21,7 @@ import {
 } from "../../data";
 
 export default function Portfolio() {
-  const [selected, setSelected] = useState("featured");
+  const [selected, setSelected] = useState("Reverse");
   const [data, setData] = useState([]);
   const carouselRef = useRef(null);
   const list = [
