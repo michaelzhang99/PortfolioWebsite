@@ -10,7 +10,11 @@ export default function Intro() {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ["Mechanical Engineer", "Designer", "Inventor"],
+      strings: [
+        "Mechanical Engineer",
+        "Prototype Designer",
+        "Research Engineer",
+      ],
     });
   }, []);
 
